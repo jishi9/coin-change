@@ -2,18 +2,6 @@
 
 from itertools import takewhile
 
-def new_change_of_length(length):
-	return tuple([0] * length)
-
-def with_incremented_ith_denomination(change, index):
-	new_change = list(change)
-	new_change[index] += 1
-	return tuple(new_change)
-
-def save_for_amount(amount, value):
-	self.cache[amount] = list(self._change_for(amount))
-
-
 def abstractMethod(): raise NotImplementedError('Abstract method')
 
 class CoinChanger(object):
