@@ -3,7 +3,7 @@ import unittest
 
 class McDonaldsTest(unittest.TestCase):
 
-	def test_change_for_zero(self):
+	def test_is_changeable(self):
 		mcdonalds = McDonalds((6,9,20))
 		self.assertTrue(mcdonalds.is_changeable(6))
 		self.assertTrue(mcdonalds.is_changeable(20))
