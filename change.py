@@ -1,4 +1,5 @@
-# Given a set of denominations, yields all possible ways of obtaining a value.
+# An implementation solving the change making problem and related problems.
+# See http://en.wikipedia.org/wiki/Change-making_problem
 
 from itertools import takewhile
 
@@ -48,6 +49,7 @@ class CoinChanger(object):
 
 
 class AllPossibilitiesCoinChanger(CoinChanger):
+        '''Given a set of denominations, yields all possible ways of making change for a given value.'''
 	def __init__(self, denominations):
 		super(AllPossibilitiesCoinChanger, self).__init__(denominations)
 
@@ -64,6 +66,7 @@ class AllPossibilitiesCoinChanger(CoinChanger):
 
 
 class MinimumCoinChanger(CoinChanger):
+        '''Given a set of denominations, a best way (minimize the number of coins) of making change for a given value.'''
 	def __init__(self, denominations):
 		super(MinimumCoinChanger, self).__init__(denominations)
 
@@ -83,7 +86,8 @@ class MinimumCoinChanger(CoinChanger):
 
 
 class BooleanCoinChanger(CoinChanger):
-	def __init__(self, denominations):
+        '''Given a set of denominations, determines whether it is possible to make change for a given value'''
+        def __init__(self, denominations):
 		super(BooleanCoinChanger, self).__init__(denominations)
 
 	def _get_value_for_zero_change(self):
